@@ -1,0 +1,5 @@
+@baseUrl = http://localhost:8084/renting
+### Search movies by title or genre
+GET {{baseUrl}}/peliculas?titulo=Jurassic Park&genero=Aventura
+Accept: application/json
+Content-Type: application/json

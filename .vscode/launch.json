@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-RentingApplication<renting>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "cr.ac.ucr.paraiso.dsw4.renting.RentingApplication",
+            "projectName": "renting",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
