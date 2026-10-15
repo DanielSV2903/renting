@@ -1,7 +1,21 @@
 package cr.ac.ucr.paraiso.dsw4.renting.domain;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "Genero")
 public class Genero {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "genero_id")
     private int generoId;
+
+    @Column(name = "nombre_genero", length = 50, nullable = false)
     private String nombreGenero;
 
     public Genero(){

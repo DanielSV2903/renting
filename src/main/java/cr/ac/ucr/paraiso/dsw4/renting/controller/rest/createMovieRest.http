@@ -1,0 +1,23 @@
+@baseUrl = http://localhost:8084/renting/
+### Search movies by title or genre
+POST {{baseUrl}}peliculas
+Content-Type: application/json
+Accept: application/json
+
+{
+  "titulo": "The Godfather",
+  "subtitulada": false,
+  "estreno": false,
+  "genero": {
+    "generoId": 803
+  },
+  "actores": [
+    {
+      "actorId": 811
+    },
+    {
+      "actorId": 812
+    }
+  ]
+}
+

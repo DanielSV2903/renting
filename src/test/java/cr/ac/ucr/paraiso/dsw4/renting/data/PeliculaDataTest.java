@@ -17,12 +17,15 @@ import org.springframework.transaction.annotation.Transactional;
 import cr.ac.ucr.paraiso.dsw4.renting.domain.Actor;
 import cr.ac.ucr.paraiso.dsw4.renting.domain.Genero;
 import cr.ac.ucr.paraiso.dsw4.renting.domain.Pelicula;
+import cr.ac.ucr.paraiso.dsw4.renting.business.PeliculaBusiness;
 
 @SpringBootTest
 public class PeliculaDataTest {
 
     @Autowired
     private PeliculaData peliculaData;
+    @Autowired
+    private PeliculaBusiness peliculaBusiness;
     @Autowired 
     private JdbcTemplate jdbcTemplate;
  
@@ -68,7 +71,7 @@ public class PeliculaDataTest {
         new Genero(generoId, null), actores);
        
         //Act
-        assertDoesNotThrow(() -> peliculaData.save(pelicula));
+        assertDoesNotThrow(() -> peliculaBusiness.save(pelicula));
         // Assert
         assertNotEquals(0, pelicula.getPeliculaId());
     }

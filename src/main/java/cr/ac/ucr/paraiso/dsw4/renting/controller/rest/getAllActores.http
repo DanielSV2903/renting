@@ -1,0 +1,5 @@
+@baseUrl = http://localhost:8084/renting/
+### Search movies by title or genre
+GET  {{baseUrl}}actores
+Content-Type: application/json
+Accept: application/json
